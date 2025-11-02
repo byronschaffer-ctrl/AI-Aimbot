@@ -7,7 +7,7 @@ from termcolor import colored
 def on_release(key):
     try:
         if key == keyboard.Key.f1:
-            Aimbot.update_status_aimbot()
+            Aimbot.update_status_aimbot(9)
         if key == keyboard.Key.f2:
             Aimbot.clean_up()
     except NameError:
@@ -70,5 +70,5 @@ if __name__ == "__main__":
         os.makedirs("lib/data")
     from lib.aimbot import Aimbot
     listener = keyboard.Listener(on_release=on_release)
-    listener.start()
-    main()
+    listener.start(9)
+    main(9)
